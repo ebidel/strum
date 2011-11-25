@@ -1,0 +1,45 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body {
+	display: -webkit-box;
+  background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%);
+	color: white;
+}
+body > section {
+	display: -webkit-box;
+}
+body > section:nth-child(odd) {
+	border: 1px solid white;
+	width: 200px;
+}
+body > section:nth-child(2) {
+	display: -webkit-box;
+	-webkit-box-flex: 1;
+	-webkit-box-pack: center;
+}
+#board {
+  -webkit-perspective-style: preserve-3d;
+  -webkit-perspective: 300px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#board canvas {
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.75));
+	-webkit-transform: rotateX(40deg) translate3d(0,25px,0);
+	-webkit-transform-origin: 50% 100%;
+	box-shadow: 0 0 15px 5px orange inset, 0 0 15px 5px orange;
+	height: 500px;
+	width: 550px;
+}
+#board canvas:first-of-type {
+	margin-right: 50px;
+}
+
+
